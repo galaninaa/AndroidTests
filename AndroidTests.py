@@ -1,11 +1,10 @@
 import unittest
 from appium import webdriver
-import xmlrunner
 import argparse
 import sys
+import xmlrunner
 import os
 from time import sleep
-from lxml import etree
 import TestVariables as TV
 import TestMethods as TM
 
@@ -69,3 +68,17 @@ class TestAuto(unittest.TestCase):
         sleep(2)
         self.driver.find_element_by_xpath(TV.More_Options.Credits).click
         sleep(2)
+
+
+if __name__ == '__main__':
+    print "START!"
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestAuto)
+    print "SUITE"
+    # unittest.TextTestRunner().run(suite)
+    #unittest.main(testRunner=xmlrunner.XMLTestRunner(output='/Users/galaninaa/test-reports/' ))
+    #outfile_ = open("/Users/galaninaa/test-reports/"+ str(folder)+'/' + 'report '+ str(datetime.datetime.now()) + '.xml', "w")
+    # os.path.dirname(__file__)+'/'+str(folder) + '/' + 'report' +
+    # str(datetime.datetime.now().date()))
+    runner = xmlrunner.XMLTestRunner()
+    # outfile="/Users/galaninaa/test-reports/"+ str(folder))
+    runner. run(suite)
