@@ -6,5 +6,6 @@ def preLogin(driver):
     driver.find_element_by_xpath('//android.widget.Button[@text="Sign in"]').click()
     email = driver.find_element_by_xpath('//android.widget.EditText')
     sleep(1)
-    email.send_keys(TV.AccountData['email'])
+    account_email = TV.AccountData['email']
+    email.send_keys(str(account_email))
     driver.find_element_by_xpath('//android.widget.Button[@text="CONTINUE"]').click()

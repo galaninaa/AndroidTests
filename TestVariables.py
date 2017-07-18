@@ -1,5 +1,8 @@
 import More_Options
 
+AppPath = 'C:\\PyCharmProj\\talkatoneAndroid-5.6.4-rc4.apk'
+#'/Users/builder/Documents/builds/apk/Release/talkatoneandroid-5.6.4-rc2.apk'
+
 AccountData = {'email':'anton+auto3@talkme.im','number':'3656516221'}
 
 SignIn = {'id':'com.talkatone.android:id/sign_in_butt','xpath':'//android.widget.Button[@text="Sign in"]'}

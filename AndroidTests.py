@@ -18,7 +18,7 @@ def createParser():
     parser.add_argument('-l', '--link', default='localhost')
     parser.add_argument('-p', '--port', default='4723')
     parser.add_argument('-f', '--folder', default='Android')
-    parser.add_argument('-app_path', '--app_path', default = '/Users/builder/Documents/builds/apk/Release/talkatoneandroid-5.6.4-rc2.apk')
+    parser.add_argument('-app_path', '--app_path', default = TV.AppPath)
     parser.add_argument('-plV', '--platformVersion', default='7.1.2')
     return parser
 
@@ -54,7 +54,7 @@ class TestAuto(unittest.TestCase):
         print "set up - OK!"
         sleep(10)
         print self.driver.session_id
-        TM.preLogin()
+        TM.preLogin(self.driver)
 
         sleep(20)
 
@@ -66,7 +66,7 @@ class TestAuto(unittest.TestCase):
         sleep(2)
         self.driver.find_element_by_accessibility_id(TV.MoreOptions['accessibility id']).click()
         sleep(2)
-        self.driver.find_element_by_xpath(TV.More_Options.Credits).click
+        self.driver.find_element_by_xpath(TV.More_Options.Credits['xpath']).click()
         sleep(2)
 
 
@@ -74,11 +74,13 @@ if __name__ == '__main__':
     print "START!"
     suite = unittest.TestLoader().loadTestsFromTestCase(TestAuto)
     print "SUITE"
-    # unittest.TextTestRunner().run(suite)
+    unittest.TextTestRunner().run(suite)
+
     #unittest.main(testRunner=xmlrunner.XMLTestRunner(output='/Users/galaninaa/test-reports/' ))
-    #outfile_ = open("/Users/galaninaa/test-reports/"+ str(folder)+'/' + 'report '+ str(datetime.datetime.now()) + '.xml', "w")
+    # outfile_ = open("/Users/galaninaa/test-reports/"+ str(folder)+'/' + 'report '+ str(datetime.datetime.now()) + '.xml', "w")
     # os.path.dirname(__file__)+'/'+str(folder) + '/' + 'report' +
     # str(datetime.datetime.now().date()))
-    runner = xmlrunner.XMLTestRunner()
-    # outfile="/Users/galaninaa/test-reports/"+ str(folder))
-    runner. run(suite)
+
+    #for running with report
+    #       runner = xmlrunner.XMLTestRunner()
+    #       runner. run(suite)
