@@ -6,6 +6,7 @@ import sys
 import os
 from time import sleep
 from lxml import etree
+import TestVariables
 
 
 def createParser():
@@ -52,6 +53,7 @@ class TestAuto(unittest.TestCase):
         print "set up - OK!"
         sleep(10)
         print self.driver.session_id
+
         sleep(20)
 
     def tearDown(self):
@@ -59,4 +61,5 @@ class TestAuto(unittest.TestCase):
         self.driver.quit()
 
     def test_Test(self):
-        self.driver.f
+
+        self.driver.find_element_by_xpath(TestVariables.More_Options.Credits).click

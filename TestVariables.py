@@ -1,3 +1,5 @@
+import More_Options
+
 AccountData = {'email':'anton+auto3@talkme.im','number':'3656516221'}
 
 SignIn = {'id':'com.talkatone.android:id/sign_in_butt','xpath':'//android.widget.Button[@text="Sign in"]'}
@@ -20,12 +22,5 @@ SectionBar = {'id':'com.talkatone.android:id/section_name','xpath':'//android.wi
 
 MoreOptions = {'accessibility id':'More options','xpath':'//android.widget.ImageView[@content-desc="More options"]'}
 
-MoreOptions_Settings = {'id':'','xpath':'//android.widget.TextView[@text="Settings"]'}
-MoreOptions_Help = {'id':'','xpath':'//android.widget.TextView[@text="Help"]'}
-MoreOptions_Credits = {'id':'','xpath':'//android.widget.TextView[@text="Credits"]'}
-MoreOptions_ClearCallHistory = {'id':'','xpath':'//android.widget.TextView[@text="Clear Call History"]'}
-MoreOptions_ClearMessageHistory = {'id':'','xpath':'//android.widget.TextView[@text="Clear Message History"]'}
-MoreOptions_MarkAllRead = {'id':'','xpath':'//android.widget.TextView[@text="Mark all read"]'}
-MoreOptions_DisplayOptions = {'id':'','xpath':'//android.widget.TextView[@text="Display Options"]'}
 
 Settings = {}
