@@ -9,3 +9,5 @@ def preLogin(driver):
     account_email = TV.AccountData['email']
     email.send_keys(str(account_email))
     driver.find_element_by_xpath('//android.widget.Button[@text="CONTINUE"]').click()
+
+def

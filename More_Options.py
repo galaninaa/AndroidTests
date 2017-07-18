@@ -5,3 +5,5 @@ ClearCallHistory = {'id':'','xpath':'//android.widget.TextView[@text="Clear Call
 ClearMessageHistory = {'id':'','xpath':'//android.widget.TextView[@text="Clear Message History"]'}
 MarkAllRead = {'id':'','xpath':'//android.widget.TextView[@text="Mark all read"]'}
 DisplayOptions = {'id':'','xpath':'//android.widget.TextView[@text="Display Options"]'}
+
+Help
