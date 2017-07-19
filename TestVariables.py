@@ -1,9 +1,9 @@
-import More_Options
+import TV_More_Options
 
 AppPath = 'C:\\PyCharmProj\\talkatoneAndroid-5.6.4-rc4.apk'
 #'/Users/builder/Documents/builds/apk/Release/talkatoneandroid-5.6.4-rc2.apk'
 
-AccountData = {'email':'anton+auto3@talkme.im','number':'3656516221'}
+AccountData = {'email':'anton+auto3@talkme.im','number':'3656516221','name':''}
 
 SignIn = {'id':'com.talkatone.android:id/sign_in_butt','xpath':'//android.widget.Button[@text="Sign in"]'}
 SignUp = {'id':'com.talkatone.android:id/sign_up_butt','xpath':'//android.widget.Button[@text="Sign up"]'}
@@ -25,5 +25,6 @@ SectionBar = {'id':'com.talkatone.android:id/section_name','xpath':'//android.wi
 
 MoreOptions = {'accessibility id':'More options','xpath':'//android.widget.ImageView[@content-desc="More options"]'}
 
+NavigateUp = {'accessibility id':'Navigate up','xpath':'//android.widget.ImageButton[@content-desc="Navigate up"]'}
 
-Settings = {}
+
