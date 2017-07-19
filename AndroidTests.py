@@ -48,13 +48,16 @@ class TestAuto(unittest.TestCase):
         desired_caps['deviceName'] = device_name
         desired_caps['waitForAppScript'] = '$.delay(3500)'
         desired_caps['noReset'] = True
-        desired_caps["appActivity"] = 'com.talkatone.vedroid.amzlogin.loginscreens.TktnLoginWelcome'
+        desired_caps['fullReset'] = False
+
+
+        desired_caps["appActivity"] = 'com.talkatone.vedroid.TalkatoneTabsMain'
         self.driver = webdriver.Remote(
             'http://' + str(link) + ':' + str(port) + '/wd/hub', desired_caps)
         print "set up - OK!"
         sleep(10)
         print self.driver.session_id
-        TM.preLogin(self.driver)
+        #TM.preLogin(self.driver)
 
         sleep(20)
 
@@ -62,12 +65,56 @@ class TestAuto(unittest.TestCase):
         "Tear down the test"
         self.driver.quit()
 
-    def test_Test(self):
+    def test_SettingsScreen(self):
         sleep(2)
         self.driver.find_element_by_accessibility_id(TV.MoreOptions['accessibility id']).click()
         sleep(2)
-        self.driver.find_element_by_xpath(TV.More_Options.Credits['xpath']).click()
-        sleep(2)
+        self.driver.find_element_by_xpath(TV.More_Options.Settings['xpath']).click()
+        sleep(10)
+
+        Header = self.driver.find_element_by_id(TV.Settings.Header['id'])
+        print "Header: ", Header.text, " is on screen"
+
+        ScrollView = self.driver.find_element_by_id(TV.Settings.SettingsScrollViewContainer['id'])
+        print "ScrollView is on screen"
+
+        AccountData = [TV.Settings.AccountData, TV.Settings.AccountName, TV.Settings.AccountEmail,
+                       TV.Settings.AccountPhone]
+        for element in AccountData:
+            OnScreen = self.driver.find_element_by_id(element['id'])
+            print "Element ", element, " with text ", OnScreen.text, " is on screen"
+
+        Buttons = [TV.Settings.BurnNumberButton, TV.Settings.ShareNumberButton, TV.Settings.IternationalCallsSubState,
+                   TV.Settings.PaidCredits, TV.Settings.BuyCredits, TV.Settings.RemoveAdsSwitch,
+                   TV.Settings.IternationalCallsSubStateMore]
+        for element in Buttons:
+            OnScreen = self.driver.find_element_by_id(element['id'])
+            print "Element ", element, "  is on screen"
+
+        AllSettingsElements = TV.Settings.giveAllSettingsPath(TV.Settings.MenuItems)
+        for MenuItemNum in range(len(AllSettingsElements)//2 + 1):
+            self.driver.find_element_by_xpath(AllSettingsElements[MenuItemNum])
+            print "Element ",AllSettingsElements[MenuItemNum], " with number ", MenuItemNum, " is on screen"
+
+
+        AllSmallElements = TV.Settings.giveAllSettingsPath(TV.Settings.SmallMenuItems)
+
+        for SmallMenuItem in AllSmallElements:
+            print SmallMenuItem
+            self.driver.find_element_by_xpath(SmallMenuItem)
+            print "Element ", SmallMenuItem, " is on screen"
+
+        StartScroll = self.driver.find_element_by_xpath(AllSettingsElements[len(AllSettingsElements)//2])
+        EndScroll = self.driver.find_element_by_xpath(AllSettingsElements[0])
+
+        self.driver.drag_and_drop(StartScroll,EndScroll)
+
+        for MenuItemNum in range(len(AllSettingsElements)//2,len(AllSettingsElements)):
+            self.driver.find_element_by_xpath(AllSettingsElements[MenuItemNum])
+            print "Element ", AllSettingsElements[MenuItemNum], " with number ", MenuItemNum, " is on screen"
+
+        ContactUs = self.driver.find_element_by_xpath(TV.Settings.ContactUs['xpath'])
+        print "Element ", TV.Settings.ContactUs['xpath'], " with text ", ContactUs.text, " is on screen"
 
 
 if __name__ == '__main__':

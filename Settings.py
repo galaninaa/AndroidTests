@@ -16,7 +16,7 @@ SettingsScrollViewContainer = {'id': 'com.talkatone.android:id/settingsScrollCon
 
 MenuItems = ['Get a New Number','Credits','Remove Ads', 'International Calls', 'Notifications & Sounds', 'Voicemail Greeting', 'Texting', 'Passcode',	'Blocked numbers', 'Miscellaneous', 'Quit Talkatone']
 
-SmallMenuItems = ['For international calls', 'Active','	Unlimited calls to select countries']
+SmallMenuItems = ['For international calls', 'Active','Unlimited calls to select countries']
 
 PaidCredits = {'id':'com.talkatone.android:id/paid_credits_text', 'xpath':'//android.widget.TextView[@resource-id="com.talkatone.android:id/paid_credits_text"]'}
 #Only if Paid Credits text = 0.00
@@ -28,4 +28,11 @@ IternationalCallsSubState = {'id':'com.talkatone.android:id/subs_state', 'xpath'
 
 IternationalCallsSubStateMore = {'id':'com.talkatone.android:id/more', 'xpath':'//android.widget.TextView[@resource-id="com.talkatone.android:id/more"]'}
 
-ContactUs = {'id':'', 'xpath':'//android.widget.TextView[@text="Need help with Talkatone? Contact us"]'}
+ContactUs = {'id':'', 'xpath':'//android.widget.TextView[@text="Need help with Talkatone? \n Contact us"]'}
+
+def giveAllSettingsPath(MenuItems):
+    all=[]
+    for allElement in MenuItems:
+        all.append('//android.widget.TextView[@text="'+allElement+'"]')
+    return all
+
