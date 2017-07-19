@@ -54,8 +54,8 @@ class TestAuto(unittest.TestCase):
         desired_caps["appActivity"] = 'com.talkatone.vedroid.TalkatoneTabsMain'
         self.driver = webdriver.Remote(
             'http://' + str(link) + ':' + str(port) + '/wd/hub', desired_caps)
-        print "set up - OK!"
-        sleep(10)
+        print "##########################################################"
+        print "Set up - OK!"
         print self.driver.session_id
         #TM.preLogin(self.driver)
 
@@ -63,9 +63,17 @@ class TestAuto(unittest.TestCase):
 
     def tearDown(self):
         "Tear down the test"
+        print "\n##########################################################"
+        print "##########################################################"
+        print "/\/\//\/\/\//\//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ "
+        print "##########################################################"
         self.driver.quit()
+        print"\n"
 
     def test_SettingsScreen(self):
+        TestName = 'Settings > Validation Settings screen'
+        print "Test: ", TestName
+
         sleep(2)
         self.driver.find_element_by_accessibility_id(TV.MoreOptions['accessibility id']).click()
         sleep(2)
@@ -116,6 +124,72 @@ class TestAuto(unittest.TestCase):
         ContactUs = self.driver.find_element_by_xpath(TV.Settings.ContactUs['xpath'])
         print "Element ", TV.Settings.ContactUs['xpath'], " with text ", ContactUs.text, " is on screen"
 
+    def test_SettingsGetANewNumber(self):
+        TestName = 'Settings > Get A New Number'
+        print "Test: ", TestName
+
+        sleep(2)
+        self.driver.find_element_by_accessibility_id(TV.MoreOptions['accessibility id']).click()
+        sleep(2)
+        self.driver.find_element_by_xpath(TV.More_Options.Settings['xpath']).click()
+        sleep(10)
+
+        Header = self.driver.find_element_by_id(TV.Settings.Header['id'])
+        print "Header: ", Header.text, " is on screen"
+
+        ScrollView = self.driver.find_element_by_id(TV.Settings.SettingsScrollViewContainer['id'])
+        print "ScrollView is on screen"
+
+        AllSettingsElements = TV.Settings.giveAllSettingsPath(TV.Settings.MenuItems)
+
+        item = self.driver.find_element_by_xpath(AllSettingsElements[0])
+        print "Element ", AllSettingsElements[0], " with text ", item.text, " is on screen"
+        item.click()
+        sleep(5)
+
+    def test_SettingsCredits(self):
+        TestName = 'Settings > Credits'
+        print "Test: ", TestName
+        sleep(2)
+        self.driver.find_element_by_accessibility_id(TV.MoreOptions['accessibility id']).click()
+        sleep(2)
+        self.driver.find_element_by_xpath(TV.More_Options.Settings['xpath']).click()
+        sleep(10)
+
+        Header = self.driver.find_element_by_id(TV.Settings.Header['id'])
+        print "Header: ", Header.text, " is on screen"
+
+        ScrollView = self.driver.find_element_by_id(TV.Settings.SettingsScrollViewContainer['id'])
+        print "ScrollView is on screen"
+
+        AllSettingsElements = TV.Settings.giveAllSettingsPath(TV.Settings.MenuItems)
+
+        item = self.driver.find_element_by_xpath(AllSettingsElements[1])
+        print "Element ", AllSettingsElements[1], " with text ", item.text, " is on screen"
+        item.click()
+        sleep(5)
+
+    def test_SettingsRemoveAds(self):
+        TestName = 'Settings > Remove Ads'
+        print "Test: ", TestName
+
+        sleep(2)
+        self.driver.find_element_by_accessibility_id(TV.MoreOptions['accessibility id']).click()
+        sleep(2)
+        self.driver.find_element_by_xpath(TV.More_Options.Settings['xpath']).click()
+        sleep(10)
+
+        Header = self.driver.find_element_by_id(TV.Settings.Header['id'])
+        print "Header: ", Header.text, " is on screen"
+
+        ScrollView = self.driver.find_element_by_id(TV.Settings.SettingsScrollViewContainer['id'])
+        print "ScrollView is on screen"
+
+        AllSettingsElements = TV.Settings.giveAllSettingsPath(TV.Settings.MenuItems)
+        item = self.driver.find_element_by_xpath(AllSettingsElements[2])
+        print "Element ", AllSettingsElements[2], " with text ", item.text, " is on screen"
+        item.click()
+        sleep(5)
 
 if __name__ == '__main__':
     print "START!"
