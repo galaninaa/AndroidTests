@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f565bdd1-b7a5-4222-b397-32b605cea813" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/adb_info.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/AndroidTests.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidTests.py" afterPath="$PROJECT_DIR$/AndroidTests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/More_Options.py" afterPath="$PROJECT_DIR$/More_Options.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Settings.py" afterPath="$PROJECT_DIR$/Settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestMethods.py" afterPath="$PROJECT_DIR$/TestMethods.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestVariables.py" afterPath="$PROJECT_DIR$/TestVariables.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adb_info.py" afterPath="$PROJECT_DIR$/adb_info.py" />
     </list>
     <ignored path="AndroidTests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,22 +33,22 @@
     <favorites_list name="AndroidTests" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Settings.py" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="48">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adb_info.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adb_info.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adb_info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -48,23 +59,22 @@
       <file leaf-file-name="AndroidTests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="199" column="32" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
+            <state relative-caret-position="3">
+              <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#1129#2108#0" expanded="false" />
-                <element signature="e#2142#2511#0" expanded="false" />
+                <element signature="e#1081#1931#0" expanded="false" />
+                <element signature="e#1965#2338#0" expanded="false" />
+                <element signature="e#2386#2940#0" expanded="false" />
+                <element signature="e#2991#3560#0" expanded="false" />
+                <element signature="e#3611#4175#0" expanded="false" />
+                <element signature="e#4228#4726#0" expanded="false" />
+                <element signature="e#4772#6685#0" expanded="false" />
+                <element signature="e#6738#6929#0" expanded="false" />
+                <element signature="e#6976#7149#0" expanded="false" />
+                <element signature="e#7198#7377#0" expanded="false" />
+                <element signature="e#7691#7894#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="runner.py" pinned="false" current-in-tab="false">
-        <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/runner.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -72,10 +82,15 @@
       <file leaf-file-name="TestMethods.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestMethods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#78#454#0" expanded="false" />
+                <element signature="e#497#1352#0" expanded="false" />
+                <element signature="e#1384#2183#0" expanded="false" />
+                <element signature="e#2060#2183#0" expanded="false" />
+                <element signature="e#2227#2566#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -84,8 +99,8 @@
       <file leaf-file-name="TestVariables.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestVariables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="-31">
+              <caret line="6" column="69" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -93,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webdriver.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/appium/webdriver/webdriver.py">
+      <file leaf-file-name="More_Options.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/More_Options.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="155" column="8" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
+            <state relative-caret-position="0">
+              <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -121,22 +136,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/More_Options.py" />
         <option value="$PROJECT_DIR$/TV_More_Options.py" />
         <option value="$PROJECT_DIR$/TV_Settings.py" />
-        <option value="$PROJECT_DIR$/TestMethods.py" />
-        <option value="$PROJECT_DIR$/TestVariables.py" />
-        <option value="$PROJECT_DIR$/AndroidTests.py" />
         <option value="$PROJECT_DIR$/Settings.py" />
+        <option value="$PROJECT_DIR$/TestVariables.py" />
+        <option value="$PROJECT_DIR$/More_Options.py" />
         <option value="$PROJECT_DIR$/adb_info.py" />
+        <option value="$PROJECT_DIR$/AndroidTests.py" />
+        <option value="$PROJECT_DIR$/TestMethods.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="35" />
-    <option name="y" value="77" />
-    <option name="width" value="1405" />
-    <option name="height" value="888" />
+    <option name="x" value="37" />
+    <option name="y" value="15" />
+    <option name="width" value="1403" />
+    <option name="height" value="832" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -195,7 +210,7 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.adb_info">
+  <component name="RunManager" selected="Python.AndroidTests">
     <configuration default="false" name="Unittests in AndroidTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -434,8 +449,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.adb_info" />
-        <item index="1" class="java.lang.String" itemvalue="Python.AndroidTests" />
+        <item index="0" class="java.lang.String" itemvalue="Python.AndroidTests" />
+        <item index="1" class="java.lang.String" itemvalue="Python.adb_info" />
         <item index="2" class="java.lang.String" itemvalue="Python.Settings" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in AndroidTests (1)" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in AndroidTests" />
@@ -506,15 +521,17 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="77" width="1405" height="888" extended-state="0" />
+    <frame x="37" y="15" width="1403" height="832" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24927746" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24873829" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41582915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41551247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -524,7 +541,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -549,14 +565,87 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adb_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3383">
+          <caret line="199" column="32" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#1081#1931#0" expanded="false" />
+            <element signature="e#1965#2338#0" expanded="false" />
+            <element signature="e#2386#2940#0" expanded="false" />
+            <element signature="e#2991#3560#0" expanded="false" />
+            <element signature="e#3611#4175#0" expanded="false" />
+            <element signature="e#4228#4726#0" expanded="false" />
+            <element signature="e#4772#6685#0" expanded="false" />
+            <element signature="e#6738#6929#0" expanded="false" />
+            <element signature="e#6976#7149#0" expanded="false" />
+            <element signature="e#7198#7377#0" expanded="false" />
+            <element signature="e#7691#7894#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestMethods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#78#454#0" expanded="false" />
+            <element signature="e#497#1352#0" expanded="false" />
+            <element signature="e#1384#2183#0" expanded="false" />
+            <element signature="e#2060#2183#0" expanded="false" />
+            <element signature="e#2227#2566#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestVariables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidTests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#1129#2108#0" expanded="false" />
-            <element signature="e#2142#2511#0" expanded="false" />
+            <element signature="e#1081#1931#0" expanded="false" />
+            <element signature="e#1965#2338#0" expanded="false" />
+            <element signature="e#2386#2940#0" expanded="false" />
+            <element signature="e#2991#3560#0" expanded="false" />
+            <element signature="e#3611#4175#0" expanded="false" />
+            <element signature="e#4228#4726#0" expanded="false" />
+            <element signature="e#4772#6685#0" expanded="false" />
+            <element signature="e#6738#6929#0" expanded="false" />
+            <element signature="e#6976#7149#0" expanded="false" />
+            <element signature="e#7198#7377#0" expanded="false" />
+            <element signature="e#7691#7894#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -575,6 +664,11 @@
           <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#78#454#0" expanded="false" />
+            <element signature="e#497#1352#0" expanded="false" />
+            <element signature="e#1384#2183#0" expanded="false" />
+            <element signature="e#2060#2183#0" expanded="false" />
+            <element signature="e#2227#2566#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -583,7 +677,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="77" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
-          <folding />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -593,8 +689,17 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#1129#2108#0" expanded="false" />
-            <element signature="e#2142#2511#0" expanded="false" />
+            <element signature="e#1081#1931#0" expanded="false" />
+            <element signature="e#1965#2338#0" expanded="false" />
+            <element signature="e#2386#2940#0" expanded="false" />
+            <element signature="e#2991#3560#0" expanded="false" />
+            <element signature="e#3611#4175#0" expanded="false" />
+            <element signature="e#4228#4726#0" expanded="false" />
+            <element signature="e#4772#6685#0" expanded="false" />
+            <element signature="e#6738#6929#0" expanded="false" />
+            <element signature="e#6976#7149#0" expanded="false" />
+            <element signature="e#7198#7377#0" expanded="false" />
+            <element signature="e#7691#7894#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -613,6 +718,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#78#454#0" expanded="false" />
+            <element signature="e#497#1352#0" expanded="false" />
+            <element signature="e#1384#2183#0" expanded="false" />
+            <element signature="e#2060#2183#0" expanded="false" />
+            <element signature="e#2227#2566#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -621,81 +731,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/More_Options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/appium/webdriver/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="155" column="8" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestVariables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestMethods.py">
+    <entry file="file:///Library/Python/2.7/site-packages/appium/webdriver/webdriver.py" />
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/runner.py" />
+    <entry file="file://$PROJECT_DIR$/More_Options.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="199" column="32" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#1129#2108#0" expanded="false" />
-            <element signature="e#2142#2511#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/adb_info.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="152">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestMethods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#78#454#0" expanded="false" />
+            <element signature="e#497#1352#0" expanded="false" />
+            <element signature="e#1384#2183#0" expanded="false" />
+            <element signature="e#2060#2183#0" expanded="false" />
+            <element signature="e#2227#2566#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#1081#1931#0" expanded="false" />
+            <element signature="e#1965#2338#0" expanded="false" />
+            <element signature="e#2386#2940#0" expanded="false" />
+            <element signature="e#2991#3560#0" expanded="false" />
+            <element signature="e#3611#4175#0" expanded="false" />
+            <element signature="e#4228#4726#0" expanded="false" />
+            <element signature="e#4772#6685#0" expanded="false" />
+            <element signature="e#6738#6929#0" expanded="false" />
+            <element signature="e#6976#7149#0" expanded="false" />
+            <element signature="e#7198#7377#0" expanded="false" />
+            <element signature="e#7691#7894#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestVariables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="6" column="69" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
