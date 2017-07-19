@@ -100,26 +100,28 @@ class TestAuto(unittest.TestCase):
             print "Element ", element, "  is on screen"
 
         AllSettingsElements = TV.Settings.giveAllSettingsPath(TV.Settings.MenuItems)
-        for MenuItemNum in range(len(AllSettingsElements)//2 + 1):
-            self.driver.find_element_by_xpath(AllSettingsElements[MenuItemNum])
-            print "Element ",AllSettingsElements[MenuItemNum], " with number ", MenuItemNum, " is on screen"
+        ListLen = len(TV.Settings.MenuItems)
+        for MenuItemKey in TV.Settings.MenuItems[1:7]:
+
+            self.driver.find_element_by_xpath(AllSettingsElements[MenuItemKey])
+            print "Element ",AllSettingsElements[MenuItemKey], " with number ", MenuItemKey, " is on screen"
 
 
         AllSmallElements = TV.Settings.giveAllSettingsPath(TV.Settings.SmallMenuItems)
 
-        for SmallMenuItem in AllSmallElements:
+        for SmallMenuItem in TV.Settings.SmallMenuItems:
             print SmallMenuItem
-            self.driver.find_element_by_xpath(SmallMenuItem)
+            self.driver.find_element_by_xpath(AllSmallElements[SmallMenuItem])
             print "Element ", SmallMenuItem, " is on screen"
 
-        StartScroll = self.driver.find_element_by_xpath(AllSettingsElements[len(AllSettingsElements)//2])
-        EndScroll = self.driver.find_element_by_xpath(AllSettingsElements[0])
+        StartScroll = self.driver.find_element_by_xpath(AllSettingsElements['Texting'])
+        EndScroll = self.driver.find_element_by_xpath(AllSettingsElements['Credits'])
 
         self.driver.drag_and_drop(StartScroll,EndScroll)
 
-        for MenuItemNum in range(len(AllSettingsElements)//2,len(AllSettingsElements)):
-            self.driver.find_element_by_xpath(AllSettingsElements[MenuItemNum])
-            print "Element ", AllSettingsElements[MenuItemNum], " with number ", MenuItemNum, " is on screen"
+        for MenuItemKey in TV.Settings.MenuItems[7:]:
+            self.driver.find_element_by_xpath(AllSettingsElements[MenuItemKey])
+            print "Element ", AllSettingsElements[MenuItemKey], " with number ", MenuItemKey, " is on screen"
 
         ContactUs = self.driver.find_element_by_xpath(TV.Settings.ContactUs['xpath'])
         print "Element ", TV.Settings.ContactUs['xpath'], " with text ", ContactUs.text, " is on screen"
@@ -142,8 +144,8 @@ class TestAuto(unittest.TestCase):
 
         AllSettingsElements = TV.Settings.giveAllSettingsPath(TV.Settings.MenuItems)
 
-        item = self.driver.find_element_by_xpath(AllSettingsElements[0])
-        print "Element ", AllSettingsElements[0], " with text ", item.text, " is on screen"
+        item = self.driver.find_element_by_xpath(AllSettingsElements['Get a New Number'])
+        print "Element ", AllSettingsElements['Get a New Number'], " with text ", item.text, " is on screen"
         item.click()
         sleep(5)
 
@@ -164,8 +166,8 @@ class TestAuto(unittest.TestCase):
 
         AllSettingsElements = TV.Settings.giveAllSettingsPath(TV.Settings.MenuItems)
 
-        item = self.driver.find_element_by_xpath(AllSettingsElements[1])
-        print "Element ", AllSettingsElements[1], " with text ", item.text, " is on screen"
+        item = self.driver.find_element_by_xpath(AllSettingsElements['Credits'])
+        print "Element ", AllSettingsElements['Credits'], " with text ", item.text, " is on screen"
         item.click()
         sleep(5)
 
@@ -186,8 +188,8 @@ class TestAuto(unittest.TestCase):
         print "ScrollView is on screen"
 
         AllSettingsElements = TV.Settings.giveAllSettingsPath(TV.Settings.MenuItems)
-        item = self.driver.find_element_by_xpath(AllSettingsElements[2])
-        print "Element ", AllSettingsElements[2], " with text ", item.text, " is on screen"
+        item = self.driver.find_element_by_xpath(AllSettingsElements['Remove Ads'])
+        print "Element ", AllSettingsElements['Remove Ads'], " with text ", item.text, " is on screen"
         item.click()
         sleep(5)
 

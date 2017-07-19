@@ -31,8 +31,8 @@ IternationalCallsSubStateMore = {'id':'com.talkatone.android:id/more', 'xpath':'
 ContactUs = {'id':'', 'xpath':'//android.widget.TextView[@text="Need help with Talkatone? \n Contact us"]'}
 
 def giveAllSettingsPath(MenuItems):
-    all=[]
+    all={}
     for allElement in MenuItems:
-        all.append('//android.widget.TextView[@text="'+allElement+'"]')
+        all[allElement]='//android.widget.TextView[@text="'+allElement+'"]'
     return all
 
