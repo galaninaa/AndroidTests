@@ -43,6 +43,20 @@ def android_dev_list():
     return device_list
 
 
+
+
+
+def android_version(device):
+    version = subprocess.check_output([adb, "-s", str(device), 'shell', 'getprop', 'ro.build.version.release '])
+    version = version.replace('\n','')
+    app_version = subprocess.check_output([adb, '-s',str(device), 'shell', 'dumpsys', 'package', 'com.talkatone.android', '|', 'grep', 'versionName'])
+    app_version = app_version.replace(' ','')
+    app_version = app_version.replace('\n', '')
+
+    return version, app_version
+
+
+'''
 if __name__ == '__main__':
     device_list = android_dev_list()
     if device_list == 0:
@@ -54,15 +68,9 @@ if __name__ == '__main__':
     if install == 'y':
         for device in device_list:
             subprocess.call([adb, "-s", device, "install", "-r", build_path])
+    android_version('84B7N16804000866')
+
+'''
+#print android_version('84B7N16804000866')
 
 
-def android_version(device):
-    subprocess.call([adb, "kill-server"])
-    sleep(10)
-
-    version = subprocess.check_output([adb, "-s", str(device), 'shell', 'getprop', 'ro.build.version.release '])
-    sleep(10)
-    print version
-
-
-android_version('84B7N16804000866')

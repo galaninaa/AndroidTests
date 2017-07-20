@@ -5,8 +5,10 @@ import sys
 import xmlrunner
 import os
 from time import sleep
-import TestVariables as TV
-import TestMethods as TM
+import TestVariables as tv
+import TestMethods as tm
+import adb_info
+import subprocess
 
 
 
@@ -18,8 +20,8 @@ def create_parser():
     parser.add_argument('-l', '--link', default='localhost')
     parser.add_argument('-p', '--port', default='4723')
     parser.add_argument('-f', '--folder', default='Android')
-    parser.add_argument('-app_path', '--app_path', default=TV.AppPath)
-    parser.add_argument('-plV', '--platformVersion', default='7.1.2')
+    parser.add_argument('-app_path', '--app_path', default=tv.app_path)
+    parser.add_argument('-plV', '--platform_version', default='7.1.2')
     return parser
 
 parser = create_parser()
@@ -29,186 +31,259 @@ platform = namespace.platform
 port = namespace.port
 folder = namespace.folder
 link = namespace.link
-platformVersion = namespace.platformVersion
-Phone_number = TV.AccountData['number']
+platform_version = namespace.platform_version
+app_path = namespace.app_path
+phone_number = tv.account_data['number']
 
 
 class TestAuto(unittest.TestCase):
     def setUp(self):
-        parser = create_parser()
-        namespace = parser.parse_args(sys.argv[1:])
-        device_name = namespace.device_name
-        platform = namespace.platform
-        app_path = namespace.app_path
         "Setup for the test"
-        desired_caps = {'platformName': platform, 'platformVersion': platformVersion, 'app': app_path,
+        desired_caps = {'platformName': platform, 'platformVersion': platform_version, 'app': app_path,
                         'deviceName': device_name, 'waitForAppScript': '$.delay(3500)', 'noReset': True,
                         'fullReset': False, "appActivity": 'com.talkatone.vedroid.TalkatoneTabsMain'}
 
         self.driver = webdriver.Remote(
             'http://' + str(link) + ':' + str(port) + '/wd/hub', desired_caps)
-        print "##########################################################"
+        print "\n.*....*.*****.*....*....*...*******.*****..****..*******."
+        print ".**...*.*......*...*...*.......*....*.....*.........*...."
+        print ".*.*..*.*****...*.*.*.*........*....*****..***......*...."
+        print ".*..*.*.*.......*.*.*.*........*....*.........*.....*...."
+        print ".*...**.*****....*...*.........*....*****.****......*...."
+
         print "Set up - OK!"
         print self.driver.session_id
         # TM.preLogin(self.driver)
 
-        sleep(20)
+        sleep(10)
 
     def tearDown(self):
         """Tear down the test"""
-        print "\n##########################################################"
-        print "##########################################################"
-        print "/\/\//\/\/\//\//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ "
         print "##########################################################"
         self.driver.quit()
         print"\n"
 
+    def test_Settings_NotificationsSounds(self):
+        test_name = 'Settings > Notifications & Sounds'
+        print "Test: ", test_name
+
+        tm.open_settings(self.driver)
+        tm.tap_on_settings_items('Notifications & Sounds', self.driver,tv.Settings.menu_items)
+        sleep(5)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.ringtone,self.driver)
+        rington = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.rington_label,self.driver)
+
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.message_notification_sounds,self.driver)
+        incoming = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.incoming_label,self.driver)
+        outgoing = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.outgoing_label,self.driver)
+
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.notification_bar,self.driver)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.display_ongoing_notification,self.driver)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.push_notifications_label,self.driver)
+
+        rington.click()
+        sleep(10)
+        tm.tap_tone(tv.Settings.SoundsAndNotifications.rington_tones,self.driver)
+
+
+
+
+'''
     def test_Calls_MoreOptions(self):
         test_name = 'Calls > More Options Validation'
         print "Test: ", test_name
 
         sleep(2)
-        calls = TM.findLifeOrDead(TV.Calls, self.driver)
+        calls = tm.find_life_or_dead(tv.calls, self.driver)
         calls.click()
         sleep(2)
-        m_o = TM.findLifeOrDead(TV.MoreOptions, self.driver)
+        m_o = tm.find_life_or_dead(tv.more_options, self.driver)
         m_o.click()
         sleep(2)
-        TM.findLifeOrDead(TV.More_Options.Settings, self.driver)
-        TM.findLifeOrDead(TV.More_Options.Help, self.driver)
-        TM.findLifeOrDead(TV.More_Options.Credits, self.driver)
-        TM.findLifeOrDead(TV.More_Options.ClearCallHistory, self.driver)
+        tm.find_life_or_dead(tv.More_Options.settings, self.driver)
+        tm.find_life_or_dead(tv.More_Options.help, self.driver)
+        tm.find_life_or_dead(tv.More_Options.credits, self.driver)
+        tm.find_life_or_dead(tv.More_Options.clear_call_history, self.driver)
 
     def test_Messages_MoreOptions(self):
         test_name = 'Messages > More Options Validation'
         print "Test: ", test_name
 
         sleep(2)
-        messages = TM.findLifeOrDead(TV.Messages, self.driver)
+        messages = tm.find_life_or_dead(tv.messages, self.driver)
         messages.click()
         sleep(2)
-        m_o = TM.findLifeOrDead(TV.MoreOptions, self.driver)
+        m_o = tm.find_life_or_dead(tv.more_options, self.driver)
         m_o.click()
         sleep(2)
-        TM.findLifeOrDead(TV.More_Options.Settings, self.driver)
-        TM.findLifeOrDead(TV.More_Options.Help, self.driver)
-        TM.findLifeOrDead(TV.More_Options.Credits, self.driver)
-        TM.findLifeOrDead(TV.More_Options.ClearMessageHistory, self.driver)
+        tm.find_life_or_dead(tv.More_Options.settings, self.driver)
+        tm.find_life_or_dead(tv.More_Options.help, self.driver)
+        tm.find_life_or_dead(tv.More_Options.credits, self.driver)
+        tm.find_life_or_dead(tv.More_Options.clear_message_history, self.driver)
 
     def test_Contacts_MoreOptions(self):
         test_name = 'Contacts > More Options Validation'
         print "Test: ", test_name
 
         sleep(2)
-        contacts = TM.findLifeOrDead(TV.Contacts, self.driver)
+        contacts = tm.find_life_or_dead(tv.contacts, self.driver)
         contacts.click()
         sleep(2)
-        m_o = TM.findLifeOrDead(TV.MoreOptions, self.driver)
+        m_o = tm.find_life_or_dead(tv.more_options, self.driver)
         m_o.click()
         sleep(2)
-        TM.findLifeOrDead(TV.More_Options.Settings, self.driver)
-        TM.findLifeOrDead(TV.More_Options.Help, self.driver)
-        TM.findLifeOrDead(TV.More_Options.Credits, self.driver)
-        TM.findLifeOrDead(TV.More_Options.DisplayOptions, self.driver)
+        tm.find_life_or_dead(tv.More_Options.settings, self.driver)
+        tm.find_life_or_dead(tv.More_Options.help, self.driver)
+        tm.find_life_or_dead(tv.More_Options.credits, self.driver)
+        tm.find_life_or_dead(tv.More_Options.display_options, self.driver)
 
     def test_Favourites_MoreOptions(self):
         test_name = 'Favourites > More Options Validation'
         print "Test: ", test_name
 
         sleep(2)
-        favorites = TM.findLifeOrDead(TV.Favorites, self.driver)
+        favorites = tm.find_life_or_dead(tv.favorites, self.driver)
         favorites.click()
         sleep(2)
-        m_o = TM.findLifeOrDead(TV.MoreOptions, self.driver)
+        m_o = tm.find_life_or_dead(tv.more_options, self.driver)
         m_o.click()
         sleep(2)
-        TM.findLifeOrDead(TV.More_Options.Settings, self.driver)
-        TM.findLifeOrDead(TV.More_Options.Help, self.driver)
-        TM.findLifeOrDead(TV.More_Options.Credits, self.driver)
+        tm.find_life_or_dead(tv.More_Options.settings, self.driver)
+        tm.find_life_or_dead(tv.More_Options.help, self.driver)
+        tm.find_life_or_dead(tv.More_Options.credits, self.driver)
 
     def test_Settings_Screen(self):
         test_name = 'Settings > Validation Settings screen'
         print "Test: ", test_name
-        TM.OpenSetings(self.driver)
+        tm.open_settings(self.driver)
 
-        buttons = [TV.Settings.BurnNumberButton, TV.Settings.ShareNumberButton, TV.Settings.IternationalCallsSubState,
-                   TV.Settings.PaidCredits, TV.Settings.BuyCredits, TV.Settings.RemoveAdsSwitch,
-                   TV.Settings.IternationalCallsSubStateMore]
+        buttons = [tv.Settings.burn_number_button, tv.Settings.share_number_button, tv.Settings.iternational_calls_sub_state,
+                   tv.Settings.paid_credits, tv.Settings.buy_credits, tv.Settings.remove_ads_switch,
+                   tv.Settings.iternational_calls_sub_state_more]
         for element in buttons:
-            on_screen = TM.findLifeOrDead(element, self.driver)
+            on_screen = tm.find_life_or_dead(element, self.driver)
             print "Element ", element, "  is on screen"
 
-        all_settings_elements = TV.Settings.giveAllSettingsPath(TV.Settings.MenuItems)
+        all_settings_elements = tm.give_all_path(tv.Settings.menu_items)
 
-        for menu_item_key in TV.Settings.MenuItems[1:7]:
+        for menu_item_key in tv.Settings.menu_items[1:7]:
             self.driver.find_element_by_xpath(all_settings_elements[menu_item_key])
-            print "Element ", all_settings_elements[menu_item_key], " with number ", menu_item_key, " is on screen"
+            print "Element ", all_settings_elements[menu_item_key], " with text ", menu_item_key, " is on screen"
 
-        all_small_elements = TV.Settings.giveAllSettingsPath(TV.Settings.SmallMenuItems)
+        try:
+            all_small_elements = tm.give_all_path(tv.Settings.small_menu_items)
 
-        for SmallMenuItem in TV.Settings.SmallMenuItems:
-            print SmallMenuItem
-            self.driver.find_element_by_xpath(all_small_elements[SmallMenuItem])
-            print "Element ", SmallMenuItem, " is on screen"
+            for small_menu_item in tv.Settings.small_menu_items:
+                sleep(5)
+                self.driver.find_element_by_xpath(all_small_elements[small_menu_item])
+                print "Element ", small_menu_item, " is on screen"
+        except:
+            all_small_elements = tm.give_all_path(tv.Settings.small_menu_items_active_no_ads)
+
+            for small_menu_item in tv.Settings.small_menu_items_active_no_ads:
+                sleep(5)
+                self.driver.find_element_by_xpath(all_small_elements[small_menu_item])
+                print "Element ", small_menu_item, " is on screen"
 
         start_scroll = self.driver.find_element_by_xpath(all_settings_elements['Texting'])
         end_scroll = self.driver.find_element_by_xpath(all_settings_elements['Credits'])
 
         self.driver.drag_and_drop(start_scroll, end_scroll)
 
-        for menu_item_key in TV.Settings.MenuItems[7:]:
+        for menu_item_key in tv.Settings.menu_items[7:]:
             self.driver.find_element_by_xpath(all_settings_elements[menu_item_key])
             print "Element ", all_settings_elements[menu_item_key], " with number ", menu_item_key, " is on screen"
 
-        contact_us = self.driver.find_element_by_xpath(TV.Settings.ContactUs['xpath'])
-        print "Element ", TV.Settings.ContactUs['xpath'], " with text ", contact_us.text, " is on screen"
+        contact_us = self.driver.find_element_by_xpath(tv.Settings.contact_us['xpath'])
+        print "Element ", tv.Settings.contact_us['xpath'], " with text ", contact_us.text, " is on screen"
 
     def test_Settings_GetANewNumber(self):
         test_name = 'Settings > Get A New Number'
         print "Test: ", test_name
 
-        TM.OpenSetings(self.driver)
-        TM.TapOnSettingsItem('Get a New Number', self.driver)
+        tm.open_settings(self.driver)
+        tm.tap_on_settings_items('Get a New Number', self.driver,tv.Settings.menu_items)
         sleep(5)
 
     def test_Settings_Credits(self):
         test_name = 'Settings > Credits'
         print "Test: ", test_name
 
-        TM.OpenSetings(self.driver)
-        TM.TapOnSettingsItem('Credits', self.driver)
+        tm.open_settings(self.driver)
+        tm.tap_on_settings_items('Credits', self.driver,tv.Settings.menu_items)
         sleep(5)
 
     def test_Settings_RemoveAds(self):
         test_name = 'Settings > Remove Ads'
         print "Test: ", test_name
 
-        TM.OpenSetings(self.driver)
-        TM.TapOnSettingsItem('Remove Ads', self.driver)
+        tm.open_settings(self.driver)
+        tm.tap_on_settings_items('Remove Ads', self.driver,tv.Settings.menu_items)
         sleep(5)
 
     def test_Settings_InternationalCalls(self):
         test_name = 'Settings > International Calls'
         print "Test: ", test_name
 
-        TM.OpenSetings(self.driver)
-        TM.TapOnSettingsItem('International Calls', self.driver)
+        tm.open_settings(self.driver)
+        tm.tap_on_settings_items('International Calls', self.driver,tv.Settings.menu_items)
         sleep(5)
 
     def test_Settings_NotificationsSounds(self):
         test_name = 'Settings > Notifications & Sounds'
         print "Test: ", test_name
 
-        TM.OpenSetings(self.driver)
-        TM.TapOnSettingsItem('Notifications & Sounds', self.driver)
+        tm.open_settings(self.driver)
+        tm.tap_on_settings_items('Notifications & Sounds', self.driver,tv.Settings.menu_items)
         sleep(5)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.rington)
+        rington = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.rington_label)
+
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.message_notification_sounds)
+        incoming = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.incoming_label)
+        outgoing = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.outgoing_label)
+
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.notification_bar)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.display_ongoing_notification)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.push_notifications_label)
+
+    def test_Settings_Miscellaneous(self):
+        test_name = 'Settings > Miscellaneous'
+        print "Test: ", test_name
+
+        tm.open_settings(self.driver)
+        tm.tap_on_settings_items('Miscellaneous', self.driver,tv.Settings.menu_items)
+        sleep(5)
+        tm.get_header(self.driver)
+        for element in tv.Settings.Miscellaneous.settings_miscellaneous_settings:
+            tm.tap_on_settings_items(element,self.driver,path=tv.Settings.Miscellaneous.settings_miscellaneous_settings)
+            tm.get_header(self.driver)
+            sleep(4)
+            back = tm.find_life_or_dead(tv.navigate_up,self.driver)
+            back.click()
+'''
+
+
+
 
 
 if __name__ == '__main__':
-    print "START!"
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestAuto)
-    print "SUITE"
-    unittest.TextTestRunner().run(suite)
+    adb_info.android_dev_list()
+
+    devices = adb_info.android_dev_list()
+
+    for device in devices:
+        #subprocess.call([adb, "-s", device, "install", "-r", build_path])
+        platform_version, app_version = adb_info.android_version(device)
+        device_name = device
+
+        print "Tests started for device: ", device_name
+        print "Talkatone version: ", app_version
+        print "OS version: ", platform_version
+
+        suite = unittest.TestLoader().loadTestsFromTestCase(TestAuto)
+        print "SUITE"
+        unittest.TextTestRunner().run(suite)
 
     # unittest.main(testRunner=xmlrunner.XMLTestRunner(output='/Users/galaninaa/test-reports/' ))
     # os.path.dirname(__file__)+'/'+str(folder) + '/' + 'report' +

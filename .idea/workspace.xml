@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f565bdd1-b7a5-4222-b397-32b605cea813" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/AndroidTests.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Miscellaneous.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SoundsAndNotifications.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/AndroidTests.iml" afterPath="$PROJECT_DIR$/.idea/AndroidTests.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidTests.py" afterPath="$PROJECT_DIR$/AndroidTests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/More_Options.py" afterPath="$PROJECT_DIR$/More_Options.py" />
@@ -34,11 +35,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Miscellaneous.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Miscellaneous.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,8 +58,8 @@
       <file leaf-file-name="adb_info.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adb_info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+            <state relative-caret-position="282">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -56,24 +67,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidTests.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AndroidTests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AndroidTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+            <state relative-caret-position="215">
+              <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#1081#1931#0" expanded="false" />
-                <element signature="e#1965#2338#0" expanded="false" />
-                <element signature="e#2386#2940#0" expanded="false" />
-                <element signature="e#2991#3560#0" expanded="false" />
-                <element signature="e#3611#4175#0" expanded="false" />
-                <element signature="e#4228#4726#0" expanded="false" />
-                <element signature="e#4772#6685#0" expanded="false" />
-                <element signature="e#6738#6929#0" expanded="false" />
-                <element signature="e#6976#7149#0" expanded="false" />
-                <element signature="e#7198#7377#0" expanded="false" />
-                <element signature="e#7691#7894#0" expanded="false" />
+                <marker date="1500555930000" expanded="false" signature="3536:4120" ph="..." />
+                <marker date="1500555930000" expanded="false" signature="4803:5396" ph="..." />
+                <marker date="1500555930000" expanded="false" signature="5440:5963" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SoundsAndNotifications.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SoundsAndNotifications.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,15 +97,10 @@
       <file leaf-file-name="TestMethods.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestMethods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+            <state relative-caret-position="252">
+              <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
-                <element signature="e#78#454#0" expanded="false" />
-                <element signature="e#497#1352#0" expanded="false" />
-                <element signature="e#1384#2183#0" expanded="false" />
-                <element signature="e#2060#2183#0" expanded="false" />
-                <element signature="e#2227#2566#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -99,8 +109,8 @@
       <file leaf-file-name="TestVariables.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestVariables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-31">
-              <caret line="6" column="69" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
+            <state relative-caret-position="15">
+              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -111,8 +121,8 @@
       <file leaf-file-name="More_Options.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/More_Options.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,19 +148,21 @@
       <list>
         <option value="$PROJECT_DIR$/TV_More_Options.py" />
         <option value="$PROJECT_DIR$/TV_Settings.py" />
-        <option value="$PROJECT_DIR$/Settings.py" />
-        <option value="$PROJECT_DIR$/TestVariables.py" />
         <option value="$PROJECT_DIR$/More_Options.py" />
+        <option value="$PROJECT_DIR$/TestVariables.py" />
+        <option value="$PROJECT_DIR$/Miscellaneous.py" />
         <option value="$PROJECT_DIR$/adb_info.py" />
+        <option value="$PROJECT_DIR$/Settings.py" />
+        <option value="$PROJECT_DIR$/SoundsAndNotifications.py" />
         <option value="$PROJECT_DIR$/AndroidTests.py" />
         <option value="$PROJECT_DIR$/TestMethods.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="37" />
-    <option name="y" value="15" />
-    <option name="width" value="1403" />
+    <option name="x" value="43" />
+    <option name="y" value="32" />
+    <option name="width" value="1744" />
     <option name="height" value="832" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -206,33 +218,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TestMethods.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Python.AndroidTests">
-    <configuration default="false" name="Unittests in AndroidTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AndroidTests" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AndroidTests.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="AndroidTests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -272,23 +262,6 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Settings" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AndroidTests" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Settings.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="adb_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -302,6 +275,45 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="AndroidTests" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adb_info.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestAuto.test_Settings_Screen" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AndroidTests" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AndroidTests.py" />
+      <option name="CLASS_NAME" value="TestAuto" />
+      <option name="METHOD_NAME" value="test_Settings_Screen" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestMethods" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AndroidTests" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestMethods.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -441,19 +453,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in AndroidTests" />
-      <item index="1" class="java.lang.String" itemvalue="Python.AndroidTests" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in AndroidTests (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Settings" />
-      <item index="4" class="java.lang.String" itemvalue="Python.adb_info" />
+      <item index="0" class="java.lang.String" itemvalue="Python.AndroidTests" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in AndroidTests (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.adb_info" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestAuto.test_Settings_Screen" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TestMethods" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.AndroidTests" />
-        <item index="1" class="java.lang.String" itemvalue="Python.adb_info" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Settings" />
+        <item index="1" class="java.lang.String" itemvalue="Python.TestMethods" />
+        <item index="2" class="java.lang.String" itemvalue="Python.adb_info" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in AndroidTests (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in AndroidTests" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestAuto.test_Settings_Screen" />
       </list>
     </recent_temporary>
   </component>
@@ -507,6 +519,9 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="Unittest_TestAuto_test_Settings_Screen - 2017.07.20 at 01h 32m 03s.xml">
+      <configuration name="Unittest TestAuto.test_Settings_Screen" configurationId="tests" />
+    </history-entry>
     <history-entry file="Unittests_in_AndroidTests - 2017.07.18 at 12h 40m 58s.xml">
       <configuration name="Unittests in AndroidTests" configurationId="tests" />
     </history-entry>
@@ -519,21 +534,24 @@
     <history-entry file="Unittests_in_AndroidTests_(1) - 2017.07.18 at 12h 58m 28s.xml">
       <configuration name="Unittests in AndroidTests (1)" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_AndroidTests_(1) - 2017.07.20 at 02h 24m 33s.xml">
+      <configuration name="Unittests in AndroidTests (1)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="15" width="1403" height="832" extended-state="0" />
-    <editor active="false" />
+    <frame x="43" y="32" width="1744" height="832" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24873829" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19907139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837838" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41551247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3581081" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -567,6 +585,65 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Settings.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adb_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1500555930000" expanded="false" signature="3536:4120" ph="..." />
+            <marker date="1500555930000" expanded="false" signature="4803:5396" ph="..." />
+            <marker date="1500555930000" expanded="false" signature="5440:5963" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestMethods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestVariables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="69" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/More_Options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
@@ -589,17 +666,9 @@
           <caret line="199" column="32" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#1081#1931#0" expanded="false" />
-            <element signature="e#1965#2338#0" expanded="false" />
-            <element signature="e#2386#2940#0" expanded="false" />
-            <element signature="e#2991#3560#0" expanded="false" />
-            <element signature="e#3611#4175#0" expanded="false" />
-            <element signature="e#4228#4726#0" expanded="false" />
-            <element signature="e#4772#6685#0" expanded="false" />
-            <element signature="e#6738#6929#0" expanded="false" />
-            <element signature="e#6976#7149#0" expanded="false" />
-            <element signature="e#7198#7377#0" expanded="false" />
-            <element signature="e#7691#7894#0" expanded="false" />
+            <marker date="1500555930000" expanded="false" signature="3536:4120" ph="..." />
+            <marker date="1500555930000" expanded="false" signature="4803:5396" ph="..." />
+            <marker date="1500555930000" expanded="false" signature="5440:5963" ph="..." />
           </folding>
         </state>
       </provider>
@@ -610,11 +679,6 @@
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-            <element signature="e#78#454#0" expanded="false" />
-            <element signature="e#497#1352#0" expanded="false" />
-            <element signature="e#1384#2183#0" expanded="false" />
-            <element signature="e#2060#2183#0" expanded="false" />
-            <element signature="e#2227#2566#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -635,17 +699,9 @@
           <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#1081#1931#0" expanded="false" />
-            <element signature="e#1965#2338#0" expanded="false" />
-            <element signature="e#2386#2940#0" expanded="false" />
-            <element signature="e#2991#3560#0" expanded="false" />
-            <element signature="e#3611#4175#0" expanded="false" />
-            <element signature="e#4228#4726#0" expanded="false" />
-            <element signature="e#4772#6685#0" expanded="false" />
-            <element signature="e#6738#6929#0" expanded="false" />
-            <element signature="e#6976#7149#0" expanded="false" />
-            <element signature="e#7198#7377#0" expanded="false" />
-            <element signature="e#7691#7894#0" expanded="false" />
+            <marker date="1500555930000" expanded="false" signature="3536:4120" ph="..." />
+            <marker date="1500555930000" expanded="false" signature="4803:5396" ph="..." />
+            <marker date="1500555930000" expanded="false" signature="5440:5963" ph="..." />
           </folding>
         </state>
       </provider>
@@ -664,11 +720,6 @@
           <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-            <element signature="e#78#454#0" expanded="false" />
-            <element signature="e#497#1352#0" expanded="false" />
-            <element signature="e#1384#2183#0" expanded="false" />
-            <element signature="e#2060#2183#0" expanded="false" />
-            <element signature="e#2227#2566#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -689,17 +740,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#1081#1931#0" expanded="false" />
-            <element signature="e#1965#2338#0" expanded="false" />
-            <element signature="e#2386#2940#0" expanded="false" />
-            <element signature="e#2991#3560#0" expanded="false" />
-            <element signature="e#3611#4175#0" expanded="false" />
-            <element signature="e#4228#4726#0" expanded="false" />
-            <element signature="e#4772#6685#0" expanded="false" />
-            <element signature="e#6738#6929#0" expanded="false" />
-            <element signature="e#6976#7149#0" expanded="false" />
-            <element signature="e#7198#7377#0" expanded="false" />
-            <element signature="e#7691#7894#0" expanded="false" />
+            <marker date="1500555930000" expanded="false" signature="3536:4120" ph="..." />
+            <marker date="1500555930000" expanded="false" signature="4803:5396" ph="..." />
+            <marker date="1500555930000" expanded="false" signature="5440:5963" ph="..." />
           </folding>
         </state>
       </provider>
@@ -718,11 +761,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-            <element signature="e#78#454#0" expanded="false" />
-            <element signature="e#497#1352#0" expanded="false" />
-            <element signature="e#1384#2183#0" expanded="false" />
-            <element signature="e#2060#2183#0" expanded="false" />
-            <element signature="e#2227#2566#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,73 +779,78 @@
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/runner.py" />
     <entry file="file://$PROJECT_DIR$/More_Options.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adb_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestMethods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-            <element signature="e#78#454#0" expanded="false" />
-            <element signature="e#497#1352#0" expanded="false" />
-            <element signature="e#1384#2183#0" expanded="false" />
-            <element signature="e#2060#2183#0" expanded="false" />
-            <element signature="e#2227#2566#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#1081#1931#0" expanded="false" />
-            <element signature="e#1965#2338#0" expanded="false" />
-            <element signature="e#2386#2940#0" expanded="false" />
-            <element signature="e#2991#3560#0" expanded="false" />
-            <element signature="e#3611#4175#0" expanded="false" />
-            <element signature="e#4228#4726#0" expanded="false" />
-            <element signature="e#4772#6685#0" expanded="false" />
-            <element signature="e#6738#6929#0" expanded="false" />
-            <element signature="e#6976#7149#0" expanded="false" />
-            <element signature="e#7198#7377#0" expanded="false" />
-            <element signature="e#7691#7894#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestVariables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <caret line="6" column="69" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
+        <state relative-caret-position="15">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/adb_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Miscellaneous.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SoundsAndNotifications.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestMethods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1500555930000" expanded="false" signature="3536:4120" ph="..." />
+            <marker date="1500555930000" expanded="false" signature="4803:5396" ph="..." />
+            <marker date="1500555930000" expanded="false" signature="5440:5963" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
