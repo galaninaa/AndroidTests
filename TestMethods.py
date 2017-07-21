@@ -1,6 +1,8 @@
 from time import sleep
 import TestVariables as tv
-
+import xmlrunner
+from lxml import etree
+from StringIO import StringIO
 
 
 def pre_login(driver):
@@ -81,10 +83,9 @@ def tap_tone(tones, driver):
     print tones_list
     for tone in tones_list:
         print tone
-        sleep(5)
-        tap_on_settings_items(tone, driver, tones_list)
-        sleep(2)
-    tap_on_settings_items(tones[1], driver, tones_list)
+        driver.find_element_by_xpath(tones_list[tone]).click()
+        sleep(0.5)
+    driver.find_element_by_xpath(tones_list[tones[1]]).click()
 
 
 def give_all_path(menu_items, item_type ='TextView'):
@@ -92,3 +93,18 @@ def give_all_path(menu_items, item_type ='TextView'):
     for all_element in menu_items:
         all[all_element] = '//android.widget.'+item_type+'[@text="' + all_element + '"]'
     return all
+
+
+def parse_all_elevents(driver,type):
+    pathes = []
+    xml = str(driver.page_source).format(unicode)
+    tree = etree.parse(StringIO(xml))
+    elements = tree.xpath(
+        '//android.widget.' + type)
+
+
+    print elements
+    for element in elements:
+        pathes.append(tree.getpath(element))
+    return pathes
+

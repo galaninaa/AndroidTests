@@ -9,7 +9,7 @@ import TestVariables as tv
 import TestMethods as tm
 import adb_info
 import subprocess
-
+import starprinter
 
 
 def create_parser():
@@ -63,27 +63,6 @@ class TestAuto(unittest.TestCase):
         self.driver.quit()
         print"\n"
 
-    def test_Settings_NotificationsSounds(self):
-        test_name = 'Settings > Notifications & Sounds'
-        print "Test: ", test_name
-
-        tm.open_settings(self.driver)
-        tm.tap_on_settings_items('Notifications & Sounds', self.driver,tv.Settings.menu_items)
-        sleep(5)
-        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.ringtone,self.driver)
-        rington = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.rington_label,self.driver)
-
-        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.message_notification_sounds,self.driver)
-        incoming = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.incoming_label,self.driver)
-        outgoing = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.outgoing_label,self.driver)
-
-        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.notification_bar,self.driver)
-        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.display_ongoing_notification,self.driver)
-        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.push_notifications_label,self.driver)
-
-        rington.click()
-        sleep(10)
-        tm.tap_tone(tv.Settings.SoundsAndNotifications.rington_tones,self.driver)
 
 
 
@@ -236,16 +215,47 @@ class TestAuto(unittest.TestCase):
         tm.open_settings(self.driver)
         tm.tap_on_settings_items('Notifications & Sounds', self.driver,tv.Settings.menu_items)
         sleep(5)
-        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.rington)
-        rington = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.rington_label)
 
-        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.message_notification_sounds)
-        incoming = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.incoming_label)
-        outgoing = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.outgoing_label)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.ringtone,self.driver)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.message_notification_sounds, self.driver)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.notification_bar, self.driver)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.display_ongoing_notification, self.driver)
+        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.push_notifications_label, self.driver)
 
-        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.notification_bar)
-        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.display_ongoing_notification)
-        tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.push_notifications_label)
+        rington = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.rington_label,self.driver)
+        rington.click()
+        sleep(5)
+        pathes = tm.parse_all_elevents(self.driver,'RadioButton')
+
+        for path in pathes:
+            self.driver.find_element_by_xpath(path).click()
+
+        #tm.tap_tone(tv.Settings.SoundsAndNotifications.rington_tones,self.driver)
+
+        back =  tm.find_life_or_dead(tv.navigate_up, self.driver)
+        back.click()
+
+        incoming = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.incoming_label, self.driver)
+        incoming.click()
+        sleep(5)
+        pathes = tm.parse_all_elevents(self.driver,'RadioButton')
+
+        for path in pathes:
+            self.driver.find_element_by_xpath(path).click()
+
+        back = tm.find_life_or_dead(tv.navigate_up, self.driver)
+        back.click()
+
+        outgoing = tm.find_life_or_dead(tv.Settings.SoundsAndNotifications.outgoing_label, self.driver)
+        outgoing.click()
+        sleep(5)
+        pathes = tm.parse_all_elevents(self.driver,'RadioButton')
+
+        for path in pathes:
+            self.driver.find_element_by_xpath(path).click()
+
+        back = tm.find_life_or_dead(tv.navigate_up, self.driver)
+        back.click()
 
     def test_Settings_Miscellaneous(self):
         test_name = 'Settings > Miscellaneous'
@@ -261,6 +271,68 @@ class TestAuto(unittest.TestCase):
             sleep(4)
             back = tm.find_life_or_dead(tv.navigate_up,self.driver)
             back.click()
+
+    def test_Settings_Passcode(self):
+        test_name = 'Settings > Passcode'
+        print "Test: ", test_name
+
+        tm.open_settings(self.driver)
+
+        all_settings_elements = tm.give_all_path(tv.Settings.menu_items)
+
+        start_scroll = self.driver.find_element_by_xpath(all_settings_elements['Texting'])
+        end_scroll = self.driver.find_element_by_xpath(all_settings_elements['Credits'])
+        self.driver.drag_and_drop(start_scroll, end_scroll)
+
+        tm.tap_on_settings_items('Passcode', self.driver, tv.Settings.menu_items)
+        sleep(5)
+
+        tm.get_header(self.driver)
+        self.driver.find_element_by_xpath('//android.widget.TextView[@resource-id="com.talkatone.android:id/label" and @text="Passcode"]')
+        switch = self.driver.find_element_by_id('com.talkatone.android:id/switchWidget')
+        print 'Switch: ', switch.text
+        switch.click()
+        sleep(10)
+
+        buttons = tm.parse_all_elevents(self.driver, 'Button')
+
+        for button in buttons:
+            self.driver.find_element_by_xpath(button)
+
+        for x in range(4):
+            self.driver.find_element_by_xpath(buttons[1]).click()
+
+        sleep(5)
+
+        self.driver.find_element_by_xpath('//android.widget.TextView[@text="Re-enter a passcode"]')
+
+        for x in range(4):
+            self.driver.find_element_by_xpath(buttons[1]).click()
+        sleep(5)
+        self.driver.find_element_by_xpath('//android.widget.TextView[@text="Change Passcode"]')
+        self.driver.find_element_by_xpath('//android.widget.TextView[@text="Require Passcode"]')
+        switch = self.driver.find_element_by_id('com.talkatone.android:id/switchWidget')
+        print 'Switch: ', switch.text
+        switch.click()
+        self.driver.find_element_by_xpath(
+            '//android.widget.TextView[@resource-id="com.talkatone.android:id/label" and @text="Passcode"]')
+
+    def test_Settings_Texting(self):
+        test_name = 'Settings > Passcode'
+        print "Test: ", test_name
+
+        tm.open_settings(self.driver)
+
+        all_settings_elements = tm.give_all_path(tv.Settings.menu_items)
+        tm.tap_on_settings_items('Texting', self.driver, tv.Settings.menu_items)
+        sleep(5)
+
+        tm.get_header(self.driver)
+        self.driver.find_element_by_xpath(
+            '//android.widget.TextView[@resource-id="com.talkatone.android:id/label" and @text="Signature"]')
+        self.driver.find_element_by_id('com.talkatone.android:id/switchWidget')
+        self.driver.find_element_by_xpath(
+            '//android.widget.TextView[@resource-id="com.talkatone.android:id/label" and @text="Save to Camera Roll"]')
 '''
 
 
