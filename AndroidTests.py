@@ -5,23 +5,23 @@ import sys
 import xmlrunner
 import os
 from time import sleep
-import TestVariables as tv
 import TestMethods as tm
+import TestVariables as tv
 import adb_info
 import subprocess
-import starprinter
+
 
 
 def create_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('-d', '--device_name',
-                        default='84B7N16804000866')
+                        default='d73bc030')
     parser.add_argument('-pl', '--platform', default='Android')
     parser.add_argument('-l', '--link', default='localhost')
     parser.add_argument('-p', '--port', default='4723')
     parser.add_argument('-f', '--folder', default='Android')
     parser.add_argument('-app_path', '--app_path', default=tv.app_path)
-    parser.add_argument('-plV', '--platform_version', default='7.1.2')
+    parser.add_argument('-plV', '--platform_version', default='4.4.2')
     return parser
 
 parser = create_parser()
@@ -55,7 +55,7 @@ class TestAuto(unittest.TestCase):
         print self.driver.session_id
         # TM.preLogin(self.driver)
 
-        sleep(10)
+        sleep(0)
 
     def tearDown(self):
         """Tear down the test"""
@@ -63,11 +63,8 @@ class TestAuto(unittest.TestCase):
         self.driver.quit()
         print"\n"
 
+    '''
 
-
-
-
-'''
     def test_Calls_MoreOptions(self):
         test_name = 'Calls > More Options Validation'
         print "Test: ", test_name
@@ -85,7 +82,7 @@ class TestAuto(unittest.TestCase):
         tm.find_life_or_dead(tv.More_Options.clear_call_history, self.driver)
 
     def test_Messages_MoreOptions(self):
-        test_name = 'Messages > More Options Validation'
+        test_name = 'Messages > More Options Va                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            lidation'
         print "Test: ", test_name
 
         sleep(2)
@@ -262,6 +259,13 @@ class TestAuto(unittest.TestCase):
         print "Test: ", test_name
 
         tm.open_settings(self.driver)
+
+        all_settings_elements = tm.give_all_path(tv.Settings.menu_items)
+
+        start_scroll = self.driver.find_element_by_xpath(all_settings_elements['Texting'])
+        end_scroll = self.driver.find_element_by_xpath(all_settings_elements['Credits'])
+        self.driver.drag_and_drop(start_scroll, end_scroll)
+
         tm.tap_on_settings_items('Miscellaneous', self.driver,tv.Settings.menu_items)
         sleep(5)
         tm.get_header(self.driver)
@@ -333,10 +337,24 @@ class TestAuto(unittest.TestCase):
         self.driver.find_element_by_id('com.talkatone.android:id/switchWidget')
         self.driver.find_element_by_xpath(
             '//android.widget.TextView[@resource-id="com.talkatone.android:id/label" and @text="Save to Camera Roll"]')
+
 '''
+    def test_Calls_Voicemail(self):
+        test_name = 'Calls > Voicemail'
+        print "Test: ", test_name
 
-
-
+        sleep(2)
+        calls = tm.find_life_or_dead(tv.calls, self.driver)
+        calls.click()
+        sleep(2)
+        voicemail = tm.find_life_or_dead(tv.voicemail, self.driver)
+        voicemail.click()
+        sleep(2)
+        #tm.get_header(self.driver)
+        tm.find_life_or_dead(tv.navigate_up, self.driver)
+        tm.find_life_or_dead(tv.Voicemail.call_back, self.driver)
+        tm.find_life_or_dead(tv.Voicemail.delete, self.driver)
+        tm.find_life_or_dead(tv.Voicemail.speaker, self.driver)
 
 
 if __name__ == '__main__':

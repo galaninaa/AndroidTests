@@ -71,6 +71,5 @@ if __name__ == '__main__':
     android_version('84B7N16804000866')
 
 '''
-#print android_version('84B7N16804000866')
 
 

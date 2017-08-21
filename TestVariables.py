@@ -1,5 +1,6 @@
 import More_Options
 import Settings
+import  Voicemail
 
 app_path = '/Users/builder/Documents/builds/apk/Release/talkatoneandroid-5.6.4-rc2.apk'
 #  'C:\\PyCharmProj\\talkatoneAndroid-5.6.4-rc4.apk'
@@ -32,3 +33,6 @@ section_bar = {'id': 'com.talkatone.android:id/section_name',
 more_options = {'accessibility id': 'More options', 'xpath': '//android.widget.ImageView[@content-desc="More options"]'}
 
 navigate_up = {'accessibility id': 'Navigate up', 'xpath': '//android.widget.ImageButton[@content-desc="Navigate up"]'}
+
+voicemail = {'accessibility id': 'Voicemail', 'xpath': '//android.widget.ImageButton[@content-desc="Voicemail"]'}
+

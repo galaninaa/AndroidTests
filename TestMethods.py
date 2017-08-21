@@ -1,6 +1,6 @@
 from time import sleep
 import TestVariables as tv
-import xmlrunner
+
 from lxml import etree
 from StringIO import StringIO
 
@@ -74,6 +74,7 @@ def tap_on_settings_items(item,driver,path):
     print "Element was clicked"
 
 def get_header(driver):
+    sleep(5)
     header = find_life_or_dead(tv.Settings.header, driver)
     print "header: ", header.text, " is on screen"
 
@@ -107,4 +108,24 @@ def parse_all_elevents(driver,type):
     for element in elements:
         pathes.append(tree.getpath(element))
     return pathes
+
+def clear_messages(driver):
+
+    messages_tab = find_life_or_dead(tv.messages,driver)
+    messages_tab.click()
+    sleep(5)
+    try:
+        driver.find_element_by_id('com.talkatone.android:id/empty_text')
+    except:
+        more_opt = find_life_or_dead(tv.more_options,driver)
+        more_opt.click()
+        sleep(5)
+        clear_messages_history = driver.find_element_by_xpath('//android.widget.TextView[@text = "Clear Message History"]')
+        clear_messages_history.click()
+        sleep(5)
+        driver.find_element_by_id('android:id/button1').click()
+    print "Cleared!"
+
+
+
 
