@@ -2,10 +2,10 @@ import unittest
 from appium import webdriver
 import argparse
 from time import sleep
-import Test_Variables as tv
-import Test_Methods as tm
+import TestVariables as tv
+import TestMethods as tm
 import adb_info
-import subprocess
+from appium.webdriver.common.touch_action import TouchAction
 
 
 
@@ -38,7 +38,7 @@ class TestAuto(unittest.TestCase):
         "Setup for the test"
         desired_caps = {'platformName': platform, 'platformVersion': platform_version, 'app': app_path,
                         'deviceName': device_name, 'waitForAppScript': '$.delay(3500)', 'noReset': True,
-                        'fullReset': False, "appActivity": 'com.talkatone.android.TalkatoneTabsMain'}
+                        'fullReset': False, "appActivity": 'com.talkatone.vedroid.TalkatoneTabsMain'}
 
         self.driver = webdriver.Remote(
             'http://' + str(link) + ':' + str(port) + '/wd/hub', desired_caps)
@@ -63,7 +63,7 @@ class TestAuto(unittest.TestCase):
     def test_Messaging(self):
         test_name = 'Messaging testing'
         print "Test: ", test_name
-        tm.clear_messages(self.driver)
+        #tm.clear_messages(self.driver)
         empty_screen = True
 
         while empty_screen == True:
@@ -72,24 +72,34 @@ class TestAuto(unittest.TestCase):
                 empty_screen = False
             except:
                 sleep(5)
-        recieved_msg = 0
-        for sended_msg in range(1, 100, 2):
-
+        received_msg = ''
+        print 'Chat screen is opened...'
+        sleep(10)
+        print('Becouse appium doesn\'t work with our message screen - I will do some special thing!')
+        self.driver.tap([(975, 73), (1080, 199)])
+        print 'I taped something on screen'
+        received_msg = 'This is the message '
+        for sent_msg in range(50):
             try:
-                print 'Check messages...'
-                self.driver.find_element_by_xpath('//android.widget.TextView[@resource-id="com.talkatone.android:id/message_text" and @text="' + str(recieved_msg) + '"]')
-                print "Recieved messages: ", recieved_msg
-                recieved_msg+=2
 
-                self.driver.find_element_by_id('com.talkatone.android:id/msgText').send_keys(sended_msg)
+                sleep(5)
+                self.driver.tap([(500, 1297),(700, 1400)])
+                Message = self.driver.find_element_by_xpath('//android.widget.TextView[@resource-id="com.talkatone.android:id/message_text"]')
+                received_msg = Message.text
+
+                print "Received messages: ", received_msg
+                sent_msg = received_msg + ' answer'
+
+                self.driver.find_element_by_id('com.talkatone.android:id/msgText').send_keys(sent_msg)
                 sleep(2)
                 self.driver.find_element_by_id('com.talkatone.android:id/btnSend').click()
                 sleep(2)
-                print "Sended messages: ", sended_msg
-
+                print "Sent messages: ", sent_msg
+                tm.clear_chat(self.driver)
             except:
                 sleep(5)
                 print "No messages!..Wait..."
+
 
 
 if __name__ == '__main__':

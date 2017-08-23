@@ -117,15 +117,16 @@ def clear_messages(driver):
     try:
         driver.find_element_by_id('com.talkatone.android:id/empty_text')
     except:
-        more_opt = find_life_or_dead(tv.more_options,driver)
-        more_opt.click()
-        sleep(5)
-        clear_messages_history = driver.find_element_by_xpath('//android.widget.TextView[@text = "Clear Message History"]')
-        clear_messages_history.click()
-        sleep(5)
+        clear_chat(driver)
         driver.find_element_by_id('android:id/button1').click()
     print "Cleared!"
 
 
 
-
+def clear_chat(driver):
+    more_opt = find_life_or_dead(tv.more_options, driver)
+    more_opt.click()
+    sleep(5)
+    clear_messages_history = driver.find_element_by_xpath('//android.widget.TextView[@text = "Clear Message History"]')
+    clear_messages_history.click()
+    sleep(5)
