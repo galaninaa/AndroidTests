@@ -113,6 +113,23 @@ def clear_messages(driver):
 
     messages_tab = find_life_or_dead(tv.messages,driver)
     messages_tab.click()
+    print ' Let\s check : Did you delete old chat?'
+    try:
+
+        driver.find_element_by_xpath('//android.widget.TextView[@resource-id="com.talkatone.android:id/line1" and @text="Anton iOSAuto1"]').click()
+        print 'Old chat is present.'
+        print 'Old chat is opened.'
+        sleep(2)
+        driver.tap([(975, 73), (1080, 199)])
+        print 'More Options menu is opened.'
+        sleep(2)
+        driver.find_element_by_xpath('//android.widget.TextView[@resource-id="com.talkatone.android:id/title" and @text="Clear Messages"]').click()
+        sleep(2)
+        driver.find_element_by_id('android:id/button1').click()
+        sleep(2)
+        driver.find_element_by_accessibility_id('Navigate up').click()
+    except:
+        print 'Maybe, old chat was deleted?'
     sleep(5)
     try:
         driver.find_element_by_id('com.talkatone.android:id/empty_text')

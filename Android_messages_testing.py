@@ -60,10 +60,10 @@ class TestAuto(unittest.TestCase):
         print"\n"
 
 
-    def test_Messaging(self):
+    def test_Keypad_Send_a_50_Messages(self):
         test_name = 'Messaging testing'
         print "Test: ", test_name
-        #tm.clear_messages(self.driver)
+        tm.clear_messages(self.driver)
         empty_screen = True
 
         while empty_screen == True:
@@ -72,33 +72,50 @@ class TestAuto(unittest.TestCase):
                 empty_screen = False
             except:
                 sleep(5)
-        received_msg = ''
+        received_msg_incoming = ''
         print 'Chat screen is opened...'
         sleep(10)
         print('Becouse appium doesn\'t work with our message screen - I will do some special thing!')
         self.driver.tap([(975, 73), (1080, 199)])
         print 'I taped something on screen'
+        sleep(5)
+        self.driver.back()
         received_msg = 'This is the message '
-        for sent_msg in range(50):
+        sent_msg = int(0)
+        error_counter = 0
+        while sent_msg < 50:
+
             try:
-
+                received_msg_text = received_msg + str(sent_msg)
+                print 'I\'ll wait incoming message with text: ', received_msg_text
                 sleep(5)
-                self.driver.tap([(500, 1297),(700, 1400)])
-                Message = self.driver.find_element_by_xpath('//android.widget.TextView[@resource-id="com.talkatone.android:id/message_text"]')
-                received_msg = Message.text
+                Message = self.driver.find_element_by_xpath('//android.widget.TextView[@resource-id="com.talkatone.android:id/message_text" and @text="' + received_msg_text +'"]')
+                received_msg_incoming = Message.text
 
-                print "Received messages: ", received_msg
-                sent_msg = received_msg + ' answer'
+                print "Received messages: ", received_msg_incoming
+                sent_msg_text = received_msg_incoming + ' answer'
 
-                self.driver.find_element_by_id('com.talkatone.android:id/msgText').send_keys(sent_msg)
+                self.driver.find_element_by_id('com.talkatone.android:id/msgText').send_keys(sent_msg_text)
                 sleep(2)
                 self.driver.find_element_by_id('com.talkatone.android:id/btnSend').click()
                 sleep(2)
-                print "Sent messages: ", sent_msg
-                tm.clear_chat(self.driver)
+
+                sent_msg_obj = self.driver.find_element_by_xpath('//android.widget.TextView[@resource-id="com.talkatone.android:id/message_text" and @text="' + sent_msg_text +'"]')
+                print "Sent messages: ", sent_msg_obj.text
+
+                sent_msg += int(1)
+                error_counter = 0
+                #tm.clear_chat(self.driver)
             except:
-                sleep(5)
+                sleep(10)
                 print "No messages!..Wait..."
+                error_counter += 1
+                print 'Error counter was increased. Error counter = ', error_counter
+                if error_counter > 5:
+                    waiting_for_answer = False
+                    print 'Error counter  was maximum increased.'
+                    tm.clear_chat(self.driver)
+                    break
 
 
 

@@ -55,32 +55,37 @@ class TestAuto(unittest.TestCase):
         print self.driver.session_id
         # TM.preLogin(self.driver)
 
-
     def tearDown(self):
         """Tear down the test"""
         print "##########################################################"
         self.driver.quit()
         print"\n"
 
-
     def test_Keypad_Make_a_50_calls(self):
         test_name = 'Keyapad > Make a 50 calls'
         print "Test: ", test_name
+        print "I'll waiting incoming call."
+        sleep(10)
         count = 0
         while count < 50:
             try:
-
-                accept = self.driver.find_element_by_id('com.talkatone.android:id/takeCallButton')
+                sleep(10)
+                accept = self.driver.find_element_by_id(tv.acs.accept_call)
                 accept.click()
-                print count
-                count+=1
+                print 'This is the call number ', count+1
+                count += 1
                 sleep(25)
-                self.driver.find_element_by_id('com.talkatone.android:id/avatar').click()
+                self.driver.find_element_by_id(tv.acs.avatar).click()
+                print ' Call in progress, time of call is: ', self.driver.find_element_by_id(tv.acs.call_time).text
                 sleep(25)
-                self.driver.find_element_by_id('com.talkatone.android:id/avatar').click()
+                self.driver.find_element_by_id(tv.acs.avatar).click()
+                print ' Call in progress, time of call is: ', self.driver.find_element_by_id(tv.acs.call_time).text
                 sleep(25)
-
+                stop_time = self.driver.find_element_by_id(tv.acs.call_time).text
+                self.driver.find_element_by_id(tv.acs.clear_call_button)
+                print ' Call was stoppeds, time of call is: ', stop_time
             except:
+                print 'I\'ll wait the call a few seconds more...'
                 sleep(5)
 
 
@@ -101,11 +106,3 @@ if __name__ == '__main__':
         suite = unittest.TestLoader().loadTestsFromTestCase(TestAuto)
         print "SUITE"
         unittest.TextTestRunner().run(suite)
-
-    # unittest.main(testRunner=xmlrunner.XMLTestRunner(output='/Users/galaninaa/test-reports/' ))
-    # os.path.dirname(__file__)+'/'+str(folder) + '/' + 'report' +
-    # str(datetime.datetime.now().date()))
-
-    # for running with report
-    #       runner = xmlrunner.XMLTestRunner()
-    #       runner. run(suite)
